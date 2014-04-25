@@ -7,7 +7,6 @@ include_once('valghalla_election.features.inc');
  */
 function valghalla_election_form_alter(&$form, &$form_state, $form_id) {
   $destination = current_path();
-  dpm($destination);
   if (isset($form['type']) && isset($form['#node']) && $form_id == 'election_node_form') {
     $roles = valghalla_election_get_roles();
     // form fieldset
